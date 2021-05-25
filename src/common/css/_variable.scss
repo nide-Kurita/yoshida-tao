@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+$font-family-base:  "YuGothic","Yu Gothic","Meiryo",Hiragino Sans,Hiragino Kaku Gothic ProN, sans-serif;
+
+$design-width: 640;
+$design-hight: 2160;
+
+$pc-design-width: 1200;
+$sp-design-width: 768;
+
+
+$breakpoints: (
+  'xs': 576,
+  'sm': 576,
+  'md': 769,
+  'lg': 991,
+  'xl': 1100
+) !default;
+
+$contents-width-points: (
+  'sp': 540,
+  'pc': 940
+) !default;
+
+// $color-primary: #53d888;
+$color-primary: #23af4c;
+$color-primary-light: #f7fff9;
+$color-secondary: #ff9898;
+
+// $color-primary: #0e1c63;
+// $color-primary-light: #F5F7F9;
+// $color-secondary: #fa723d;
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #9d9da3;
+
+// $color-red: #e61e0a;
+// $color-beige: #faefe5;
+// $color-green: #43c66f;
+// $color-brown: #ac814d;
+// $color-yellow: #fade24;
+
+$color-text-white: $color-white;
+$color-text-base: $color-black;
+
+$namespace: '';
+
+
+$svg-data-uri: 'data:image/svg+xml;base64,';

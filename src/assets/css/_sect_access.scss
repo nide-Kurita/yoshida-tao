@@ -1,0 +1,28 @@
+.access {
+  background-color: rgba($color-primary, 0.06);
+  .inner--access {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include mq-sp {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .access-head {
+    // margin-bottom: 40px;
+    // max-width: 1060px;
+    margin: 0 auto 20px;
+    @include mq-sp {
+      margin-bottom: 20px;
+    }
+  }
+
+  .access-map {
+    width: 100%;
+    iframe {
+      width: 100%;
+    }
+  }
+
+}

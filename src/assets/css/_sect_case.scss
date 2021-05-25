@@ -1,0 +1,62 @@
+.case {
+  .inner--case {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include mq-sp {
+      padding-top: 34px;
+      padding-bottom: 34px;
+    }
+  }
+  .case-wrap {
+    background-color: $color-primary;
+    width: (820/1200)*100%;
+    min-width: 728px;
+    // min-height: 348px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 100px;
+    padding-right: 10px;
+    @include mq-sp {
+      width: 100%;
+      min-width: auto;
+      // min-height: 228px;
+      padding: 26px 16px 26px;
+    }
+
+  }
+  // .case-block {
+  //   background-color: $color-primary;
+  //   width: (820/1200)*100%;
+  //   min-width: 728px;
+  //   // min-height: 348px;
+  //   padding-top: 40px;
+  //   padding-bottom: 40px;
+  //   padding-left: 100px;
+  //   padding-right: 10px;
+  //   @include mq-sp {
+  //     width: 100%;
+  //     min-width: auto;
+  //     // min-height: 228px;
+  //     padding: 26px 16px 26px;
+  //   }
+  // }
+  .case-head {
+    color: $color-white;
+    margin-bottom: 20px;
+    @include mq-sp {
+      margin-bottom: 14px;
+    }
+  }
+  .case-text {
+    font-size: 28px;
+    color: $color-white;
+    line-height: 1.7;
+    margin-bottom: 1em;
+    @include mq-sp {
+      font-size: 14px;
+    }
+    &:last-child {
+      margin-bottom: 0
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.service {
+
+  .inner--service {
+    padding-top: 266px;
+    padding-bottom: 86px;
+    @include mq-sp {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .sect-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 124px;
+    @include mq-sp {
+      margin-bottom: 60px;
+    }
+    .ttl {
+      &--en {
+        font-size: 68px;
+        font-weight: bold;
+        margin-bottom: 38px;
+        @include mq-sp {
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+      }
+      &--ja {
+        font-size: 28px;
+        @include mq-sp {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .service-item {
+    margin-bottom: 140px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @include mq-sp {
+      margin-bottom: 60px;
+    }
+  }
+  .service-head {
+    margin-bottom: 40px;
+    @include mq-sp {
+      margin-bottom: 32px;
+      // margin-bottom: 22px;
+    }
+  }
+  .service-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+    @include mq-sp {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  }
+  .service-img {
+    width: 50%;
+    @include mq-sp {
+      width: 100%;
+    }
+  }
+  .service-textarea {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq-sp {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+  }
+
+  .service-list {
+
+  }
+  .service-list__item {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @include mq-sp {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    >.service-list {
+      margin-top: 0.5em;
+      padding-left: 1.1em;
+      >.service-list__item {
+        line-height: 1.4;
+        font-size: 18px;
+        @include mq-sp {
+          font-size: 13px;
+        }
+      }
+
+    }
+  }
+
+
+}

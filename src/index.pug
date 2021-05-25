@@ -1,0 +1,132 @@
+extends ./_template/_template.pug
+
+//- meta
+block var
+  -var title = '吉田税理士事務所 Yoshida Tax Accounting Office';
+  -var desc = '吉田税理士事務所は、港区新橋駅にある個人税理士事務所です。「あなたの心のパートナー」をスローガンに気軽に相談できる会計事務所を目指しています。何でもお気軽にご相談ください！';
+  -var key = '吉田税理士事務所,税理士事務所,新橋,法人税申告,所得税申告,相続税申告,';
+  -var ogType = 'website';
+  -var path = '';
+  -var hasJs = true;
+
+  -var common_dir ='./common/';
+
+  -var imagePath = assets_dir+'img/';
+  -var imageCommonPath = common_dir+'img/';
+
+
+block main
+  .container
+    a#top
+    section.mv
+      .inner.inner--mv
+        .mv-wrap
+          .mv-swiper
+            .swiper-container
+              ul.swiper-wrapper
+                li.swiper-slide
+                  .wrap-img
+                    img.pc(src=imagePath+"sect-mv/img-mv-01.jpg")
+                    img.sp(src=imagePath+"sect-mv/img-mv-01_sp.jpg")
+                li.swiper-slide
+                  .wrap-img
+                    img.pc(src=imagePath+"sect-mv/img-mv-02.jpg")
+                    img.sp(src=imagePath+"sect-mv/img-mv-02_sp.jpg")
+                li.swiper-slide
+                  .wrap-img
+                    img.pc(src=imagePath+"sect-mv/img-mv-03.jpg")
+                    img.sp(src=imagePath+"sect-mv/img-mv-03_sp.jpg")
+                li.swiper-slide
+                  .wrap-img
+                    img.pc(src=imagePath+"sect-mv/img-mv-04.jpg")
+                    img.sp(src=imagePath+"sect-mv/img-mv-04_sp.jpg")
+          p.mv-head
+            span Yoshida 
+            span Tax 
+            span Accounting 
+            span Office
+          p.mv-lead.yu-mincho.
+            何でもお気軽にご相談ください<br>
+            あなたの心のパートナー
+      .scroll
+        span SCROLL
+
+    section.case
+      .inner.inner--case
+        .case-wrap.fade.fade--left
+          h2.case-head.sect-head.fade.fade--in
+            | CASE
+          p.case-text.yu-mincho.fade.fade--in.
+            「こんなくだらないこと聞いていいの？」<br>「この質問内容は会計事務所でいいの？」<br>「相談すると高額な料金がかかるんじゃないの？」
+          p.case-text.yu-mincho.fade.fade--in.
+            などと思っていませんか？
+    
+    section.about
+      .inner.inner--about
+        .about-wrap
+          .about-img.pc.fade.fade--cover
+            .bg-appear.fade.fade--in
+              img(src=imagePath+"sect-about/img-about.jpg")
+          .about-textarea
+            h2.about-head.sect-head.yu-mincho.fade.fade--in
+              | 吉田税理士事務所について
+            p.about-lead.yu-mincho.fade.fade--in
+              | 「あなたの心のパートナー」をスローガンに<br class="pc">気軽に相談できる会計事務所を目指しています。
+            .about-img.sp.fade.fade--cover
+              .bg-appear
+                img(src=imagePath+"sect-about/img-about.jpg")
+            p.about-desc.yu-mincho.fade.fade--in
+              | お医者さんに例えると何でも相談できるホームドクターのような存在です。
+              br
+              | どんな些細なことでも結構です。まずはご相談ください。
+              br
+              | 会計事務所の専門分野以外のご相談については、必要に応じて提携している各種専門家をご紹介いたします。
+              br
+              | 当事務所では簡単な電話相談、Ｅメールなどで報酬を請求することはありません。
+              br
+              | 当方からお伺いしてのご相談や各種申告書や報告書の作成など、 実際に作業を行ってはじめて報酬が発生します。そのときには、あらかじめおおよその金額を提示いたします。また、お客様の状況に応じてご相談に応じます。どんな些細なことでも結構です。まずはご相談ください。
+            p.about-name.yu-mincho.fade.fade--in
+              | 所長　吉田　靖
+    
+    a#news
+    section.news
+      .inner.inner--news
+        .news-wrap
+          h2.news-head.sect-head.fade.fade--right
+            | NEWS
+          ul.news-list
+            include ./_template/_modules/_news_list.pug
+              li.news-list__item.fade.fade--in
+                a.link(href="./news/page/" + newsList[newsList.length - 1].date +".html")
+                  p.date #{newsList[newsList.length - 1].date}
+                  p.title #{newsList[newsList.length - 1].title}
+              li.news-list__item.fade.fade--in.fade--delay-01
+                a.link(href="./news/page/" + newsList[newsList.length - 2].date +".html")
+                  p.date #{newsList[newsList.length - 2].date}
+                  p.title #{newsList[newsList.length - 2].title}
+              li.news-list__item.fade.fade--in.fade--delay-02
+                a.link(href="./news/page/" + newsList[newsList.length - 3].date +".html")
+                  p.date #{newsList[newsList.length - 3].date}
+                  p.title #{newsList[newsList.length - 3].title}
+  
+    section.other
+      .inner.inner--other
+        h2.other-head.sect-head.fade.fade--right
+          | OTHER TOPICS
+        .other-wrap
+          a(href="./company").other-link.fade.fade--cover
+            .bg-appear
+              img(src=imagePath+"sect-other/img-other-01.jpg")
+              span.name 組織概要
+          a(href="./service").other-link.fade.fade--cover
+            .bg-appear
+              img(src=imagePath+"sect-other/img-other-02.jpg")
+              span.name 業務内容
+    
+    a#access
+    section.access
+      .inner.inner--access.fade.fade--cover
+        //- h2.access-head.sect-head ACCESS
+        .access-map.bg-appear
+          iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12965.402557356474!2d139.7564023!3d35.6683673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x69896cec8a5a6991!2z5ZCJ55Sw56iO55CG5aOr5LqL5YuZ5omA!5e0!3m2!1sja!2sjp!4v1618046438031!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy")
+        

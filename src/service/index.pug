@@ -1,0 +1,119 @@
+extends ../_template/_template.pug
+
+//- meta
+block var
+  -var title = '業務内容 | 吉田税理士事務所 Yoshida Tax Accounting Office';
+  -var desc = '吉田税理士事務所は、港区新橋駅にある個人税理士事務所です。「あなたの心のパートナー」をスローガンに気軽に相談できる会計事務所を目指しています。何でもお気軽にご相談ください！';
+  -var key = '吉田税理士事務所,税理士事務所,新橋,法人税申告,所得税申告,相続税申告,';
+  -var ogType = 'website';
+  -var path = '';
+  -var hasJs = true;
+
+  -var common_dir ='../common/';
+
+  -var imagePath = assets_dir+'img/';
+  -var imageCommonPath = common_dir+'img/';
+
+
+block main
+  .container
+    section.service
+      .inner.inner--service
+        h1.sect-title 
+          span.ttl.ttl--en.fade.fade--right
+            | Service
+          span.ttl.ttl--ja.yu-mincho.fade.fade--right.fade--delay-01
+            | 業務内容
+        .service-item
+          h2.service-head.sect-head.fade.fade--right.fade--delay-02
+            | 法人及び個人事業向け業務
+          .service-content
+            .service-img.fade.fade--cover
+              .bg-appear
+                img(src=imagePath+"sect-service/img-service-03.jpg")
+            .service-textarea.fade
+              ul.service-list.yu-mincho
+                li.service-list__item.fade.fade--in
+                  | ・記帳代行及び記帳指導
+                li.service-list__item.fade.fade--in
+                  | ・源泉所得税関係事務指導
+                li.service-list__item.fade.fade--in
+                  | ・各種申告書の作成
+                li.service-list__item.fade.fade--in
+                  | ・月次巡回監査
+                li.service-list__item.fade.fade--in
+                  | ・税務調査立会い
+                li.service-list__item.fade.fade--in
+                  | ・法人設立事務及び指導
+                li.service-list__item.fade.fade--in
+                  | ・予算管理及び資金繰り指導
+          .service-content.service-content--reverse
+            .service-img.fade.fade--cover
+              .bg-appear
+                img(src=imagePath+"sect-service/img-service-01.jpg")
+            .service-textarea.fade
+              ul.service-list.yu-mincho
+                li.service-list__item.fade.fade--in
+                  | ・事業計画書の作成指導
+                li.service-list__item.fade.fade--in
+                  | ・営業報告書の作成指導
+                li.service-list__item.fade.fade--in
+                  | ・経営管理会議の指導
+                li.service-list__item.fade.fade--in
+                  | ・生命保険契約締結の指導
+                li.service-list__item.fade.fade--in
+                  | ・損害保険契約締結の指導
+                li.service-list__item.fade.fade--in
+                  | ・弁護士・司法書士・社会保険労務士の紹介
+                li.service-list__item.fade.fade--in
+                  | ・その他総合コンサルティング
+
+        .service-item
+          h2.service-head.sect-head.fade.fade--right
+            | 個人資産家向け業務
+          .service-content
+            .service-img.fade.fade--cover
+              .bg-appear
+                img(src=imagePath+"sect-service/img-service-04.jpg")
+            .service-textarea.fade
+              ul.service-list.yu-mincho
+                li.service-list__item.fade.fade--in
+                  | ・相続対策の立案及び実践指導
+                li.service-list__item.fade.fade--in
+                  | ・資産売却シミューレーション
+                li.service-list__item.fade.fade--in
+                  | ・資産売却に係る各種特例適用の指導
+                li.service-list__item.fade.fade--in
+                  | ・資産運用指導
+                li.service-list__item.fade.fade--in
+                  | ・生命保険契約締結の指導
+                li.service-list__item.fade.fade--in
+                  | ・損害保険契約締結の指導
+                li.service-list__item.fade.fade--in
+                  | ・弁護士・司法書士の紹介
+                li.service-list__item.fade.fade--in
+                  | ・その他総合コンサルティング
+        .service-item
+          h2.service-head.sect-head.fade.fade--right
+            | その他の業務
+          .service-content
+            .service-img.fade.fade--cover
+              .bg-appear
+                img(src=imagePath+"sect-service/img-service-02.jpg")
+            .service-textarea.fade
+              ul.service-list.yu-mincho
+                li.service-list__item.fade.fade--in
+                  | ・各種セミナー講師 （年間50回程度）
+                li.service-list__item.fade.fade--in
+                  | ・原稿執筆
+                li.service-list__item.fade.fade--in
+                  | ・著書
+                  ul.service-list.yu-mincho
+                    li.service-list__item.fade.fade--in
+                      | 個人の税金ガイドブック（きんざい）
+                    li.service-list__item.fade.fade--in
+                      | 法人の税金ガイドブック（きんざい）
+                    li.service-list__item.fade.fade--in
+                      | 社会保険労務士のための税務Ｑ＆Ａ100（日本法令）
+                    li.service-list__item.fade.fade--in
+                      | その他多数

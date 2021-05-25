@@ -1,0 +1,65 @@
+.footer {
+  background-color: $color-primary-light;
+  .inner--footer {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include mq-sp {
+      padding: 30px 0 15px;
+    }
+  }
+  .title {
+    color: $color-primary;
+    font-size: 24px;
+    font-weight: bold;
+    @include mq-sp {
+      font-size: 16px;
+    }
+  }
+  .address {
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    @include mq-sp {
+      font-size: 14px;
+      margin-top: 14px;
+      margin-bottom: 14px;
+    }
+  }
+  .footer-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    @include mq-sp {
+      margin-bottom: 30px;
+    }
+  }
+  .tel {
+    font-size: 18px;
+    margin: 0 0.5em;
+    @include mq-sp {
+      font-size: 14px;
+    }
+  }
+  .fax {
+    font-size: 18px;
+    margin: 0 0.5em;
+    @include mq-sp {
+      font-size: 14px;
+    }
+  }
+  .copy {
+    font-size: 14px;
+    font-weight: bold;
+    @include mq-sp {
+      font-size: 10px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+  }
+}

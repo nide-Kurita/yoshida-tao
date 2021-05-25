@@ -1,0 +1,105 @@
+.other {
+  .inner--other {
+    padding-bottom: 100px;
+    @include mq-sp {
+      padding-bottom: 40px;
+    }
+  }
+
+  .other-head {
+    // margin-bottom: 40px;
+    max-width: 1060px;
+    margin: 0 auto 40px;
+    @include mq-sp {
+      margin-bottom: 20px;
+    }
+  }
+  .other-wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  .other-link {
+    display: block;
+    width: (490/1060)*100%;
+    overflow: hidden;
+    position: relative;
+    @include mq-sp {
+      width: (300/640)*100%;;
+    }
+    .name {
+      color: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $color-white;
+      width: 180px;
+      height: 52px;
+      font-size: 24px;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 10;
+      overflow: hidden;
+      @include mq-sp {
+        font-size: 14px;
+        width: (180/300)*100%;
+        height: auto;
+        border-width: 1px;
+        padding: 0.5em 0;
+      }
+      &::before {
+        content: '';
+        background-color: $color-primary;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(100%);
+        transition: 0.1s ease-out;
+        z-index: -10;
+      }
+    }
+    img {
+      transition: all 0.3s ease-out;
+    }
+    &::before {
+      content: '';
+      width: 600px;
+      height: 600px;
+      background-color: rgba($color-primary, 0.1);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) scale(0.4);
+      opacity: 0;
+      transition: all 0.15s ease-out;
+      z-index: 10;
+      @include mq-sp {
+        width: (400/750)*100vw;
+        height: (400/750)*100vw;
+      }
+    }
+    &:hover {
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      span {
+        border-color: $color-primary;
+        &::before {
+          transform: none;
+        }
+      }
+      img {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,195 @@
+.news-list {
+
+  .inner--news {
+    padding-top: 266px;
+    padding-bottom: 86px;
+    @include mq-sp {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .sect-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 124px;
+    @include mq-sp {
+      margin-bottom: 40px;
+    }
+    .ttl {
+      &--en {
+        font-size: 68px;
+        font-weight: bold;
+        margin-bottom: 38px;
+        @include mq-sp {
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+      }
+      &--ja {
+        font-size: 28px;
+        @include mq-sp {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .link-list {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .link-list__item {
+    border-top: 1px solid $color-gray;
+    padding: 58px 0.8em 62px;
+    display: block;
+    @include mq-sp {
+      padding: 28px 0 32px;
+    }
+    &:last-child {
+      border-bottom: 1px solid $color-gray;
+    }
+
+    .wrap {
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.2s ease-out;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .item-title {
+    display: flex;
+    flex-direction: column;
+    // margin-bottom: 40px;
+    @include mq-sp {
+      // margin-bottom: 30px;
+    }
+    .ttl {
+      &--date {
+        font-size: 16px;
+        @include mq-sp {
+          font-size: 14px;
+        }
+      }
+      &--ja {
+        font-size: 22px;
+        margin-top: 0.8em;
+        line-height: 1.2;
+        @include mq-sp {
+          font-size: 16px;
+          margin-top: 0.6em;
+        }
+      }
+    }
+  }
+
+  .item-text {
+    font-size: 16px;
+    // padding: 0 0.6em;
+    margin-top: 2em;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    @include mq-sp {
+      font-size: 12px;
+      margin-top: 1.2em;
+      padding: 0;
+
+    }
+  }
+
+  .pagination {
+    .pagination-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+    }
+    .pagination-list__item {
+      .link {
+        font-size: 14px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+        border-top: 1px solid $color-gray;
+        border-left: 1px solid rgba($color-gray, 0.2);
+        border-right: 1px solid rgba($color-gray, 0.2);
+        border-bottom: 1px solid $color-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          background-color: $color-primary;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(100%);
+          transition: all 0.1s ease-out;
+          z-index: -10;
+        }
+        &.current {
+          color: $color-white;
+          background-color: $color-primary;
+          border-color: $color-primary;
+        }
+        &:hover {
+          color: $color-white;
+          border-color: $color-primary;
+          &::before {
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  .news-btn {
+    font-size: 16px;
+    width: 120px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 90px auto 0;
+
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      background-color: $color-primary;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(100%);
+      transition: 0.1s ease-out;
+      z-index: -10;
+    }
+    @include mq-sp {
+      font-size: 14px;
+      width: 80px;
+      height: 30px;
+      margin-top: 40px;
+    }
+    &:hover {
+      color: $color-white;
+      &::before {
+        transform: none;
+      }
+
+    }
+  }
+
+
+
+}

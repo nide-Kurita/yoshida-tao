@@ -1,0 +1,36 @@
+extends ../../_template/_template.pug
+
+//- meta
+block var
+  include ../../_template/_modules/_news_list.pug
+  -var num = '25';
+  -var ttl = newsList[num].title;
+  -var date = newsList[num].date;
+  
+  -var title =  ttl+' '+date+' | 吉田税理士事務所 Yoshida Tax Accounting Office';
+  -var desc = '吉田税理士事務所は、港区新橋駅にある個人税理士事務所です。「あなたの心のパートナー」をスローガンに気軽に相談できる会計事務所を目指しています。何でもお気軽にご相談ください！';
+  -var key = '吉田税理士事務所,税理士事務所,新橋,法人税申告,所得税申告,相続税申告,';
+  -var ogType = 'website';
+  -var path = '';
+  -var hasJs = true;
+
+  -var common_dir ='../../common/';
+
+  -var imagePath = assets_dir+'img/';
+  -var imageCommonPath = common_dir+'img/';
+
+
+block main
+  .container
+    article.news
+      .inner.inner--news
+        h1.sect-title 
+          time.ttl.ttl--date #{newsList[num].date}
+          span.ttl.ttl--ja.yu-mincho #{newsList[num].title}
+        .news-content
+          each list in newsList[num].text
+            p.news-text #{list}  
+
+        a.news-btn(href="/#news")
+          | TOP
+        

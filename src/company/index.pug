@@ -1,0 +1,117 @@
+extends ../_template/_template.pug
+
+//- meta
+block var
+  -var title = '組織概要 | 吉田税理士事務所 Yoshida Tax Accounting Office';
+  -var desc = '吉田税理士事務所は、港区新橋駅にある個人税理士事務所です。「あなたの心のパートナー」をスローガンに気軽に相談できる会計事務所を目指しています。何でもお気軽にご相談ください！';
+  -var key = '吉田税理士事務所,税理士事務所,新橋,法人税申告,所得税申告,相続税申告,';
+  -var ogType = 'website';
+  -var path = '';
+  -var hasJs = true;
+
+  -var common_dir ='../common/';
+
+  -var imagePath = assets_dir+'img/';
+  -var imageCommonPath = common_dir+'img/';
+
+
+block main
+  .container
+    section.company
+      .inner.inner--company
+        h1.sect-title 
+          span.ttl.ttl--en.fade.fade--right
+            | Office
+          span.ttl.ttl--ja.yu-mincho.fade.fade--right.fade--delay-01
+            | 組織概要
+        .profile.yu-mincho
+          .profile-img.fade.fade--cover
+            .bg-appear
+              img(src=imagePath+"sect-company/img-profile.jpg")
+          .profile-textarea.fade
+            h2.profile-head.sect-head.fade.fade--right
+              | 所長税理士　吉田靖
+            ul.profile-list.yu-mincho
+              li.profile-list__item.fade.fade--in
+                p.date 
+                  span.ad 昭和
+                  span.year 42年
+                  span.month 10月
+                p.content 神奈川県横浜市出身
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 昭和
+                  span.year 63年
+                  span.month 9月
+                p.content 学校法人大原簿記学校入社
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 平成
+                  span.year 4年
+                  span.month 8月
+                p.content 税理士試験合格
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 平成
+                  span.year 4年
+                  span.month 9月
+                p.content 藤間公認会計士税理士事務所入所
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 平成
+                  span.year 6年
+                  span.month 12月
+                p.content 税理士登録
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 平成
+                  span.year 8年
+                  span.month 1月
+                p.content 豊島区池袋にて吉田税理士事務所開設
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 平成
+                  span.year 12年
+                  span.month 4月
+                p.content 港区三田に移転
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 平成
+                  span.year 16年
+                  span.month 2月
+                p.content １級ファイナンシャルプランニング技能士取得
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 平成
+                  span.year 20年
+                  span.month 4月
+                p.content 港区芝浦に移転
+              li.profile-list__item.fade.fade--in
+                p.date
+                  span.ad 平成
+                  span.year 25年
+                  span.month 9月
+                p.content 現事務所に移転
+        .biography.yu-mincho
+          dl.biography-list.fade.fade--in
+            dt.biography-list__ttl 組織名
+            dd.biography-list__desc 吉田税理士事務所
+          dl.biography-list.fade.fade--in
+            dt.biography-list__ttl 郵便番号
+            dd.biography-list__desc 105-0004
+          dl.biography-list.fade.fade--in
+            dt.biography-list__ttl 住所
+            dd.biography-list__desc 東京都港区新橋１－１８－１１ 一松ビル８Ｆ　<a href="https://goo.gl/maps/VbNx9fWKUHRbcgF98" target="_blank">地図はコチラ</a>
+          dl.biography-list.fade.fade--in
+            dt.biography-list__ttl 電話番号
+            dd.biography-list__desc 03-5501-0002
+          dl.biography-list.fade.fade--in
+            dt.biography-list__ttl FAX番号
+            dd.biography-list__desc 03-5501-0003
+          dl.biography-list.fade.fade--in
+            dt.biography-list__ttl 代表者
+            dd.biography-list__desc 所長税理士　吉田靖　<a href="mailto:yasushi&#064;yoshida-tao.com">(E-mail：yasushi@yoshida-tao.com)</a>
+          dl.biography-list.fade.fade--in
+            dt.biography-list__ttl 従業員数
+            dd.biography-list__desc 5名
+              

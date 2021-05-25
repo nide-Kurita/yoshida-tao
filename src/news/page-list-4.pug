@@ -1,0 +1,54 @@
+extends ../_template/_template.pug
+
+//- meta
+block var
+  include ../_template/_modules/_news_list.pug
+  -var pageListNum = '4';
+
+  -var title =  '新着情報 | 吉田税理士事務所 Yoshida Tax Accounting Office';
+  -var desc = '吉田税理士事務所は、港区新橋駅にある個人税理士事務所です。「あなたの心のパートナー」をスローガンに気軽に相談できる会計事務所を目指しています。何でもお気軽にご相談ください！';
+  -var key = '吉田税理士事務所,税理士事務所,新橋,法人税申告,所得税申告,相続税申告,';
+  -var ogType = 'website';
+  -var path = '';
+  -var hasJs = false;
+
+  -var common_dir ='../common/';
+
+  -var imagePath = assets_dir+'img/';
+  -var imageCommonPath = common_dir+'img/';
+
+
+block main
+  .container
+    section.news-list
+      .inner.inner--news
+        h1.sect-title 
+          span.ttl.ttl--en.fade.fade--right
+            | News
+          span.ttl.ttl--ja.yu-mincho.fade.fade--right.fade--delay-01
+            | 新着情報
+        .link-list
+          each list, index in newsList.reverse()
+            if index > 17 && index < 24
+              a.link-list__item(href="./page/"+list.date+".html")
+                .wrap.fade.fade--in
+                  h2.item-title
+                    time.ttl.ttl--date #{list.date}
+                    span.ttl.ttl--ja.yu-mincho #{list.title}
+                  p.item-text #{list.text[1]}
+        
+        .pagination
+          ul.pagination-list
+            -var pageNum = Math.ceil(newsList.length/6);
+            -for (var i = 0; i < pageNum; i++)
+              li.pagination-list__item
+                if pageListNum == i + 1
+                  a.link.current #{i+1}
+                else if 1 == i + 1
+                  a.link(href="/news") #{i+1}
+                -else
+                  a.link(href="./page-list-"+(i+1)+".html") #{i+1}
+        
+        a.news-btn(href="/#news")
+          | TOP
+              

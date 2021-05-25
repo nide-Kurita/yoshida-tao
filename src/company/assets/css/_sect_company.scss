@@ -1,0 +1,168 @@
+.company {
+
+  .inner--company {
+    padding-top: 266px;
+    padding-bottom: 86px;
+    @include mq-sp {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .sect-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 124px;
+    @include mq-sp {
+      margin-bottom: 40px;
+    }
+    .ttl {
+      &--en {
+        font-size: 68px;
+        font-weight: bold;
+        margin-bottom: 38px;
+        @include mq-sp {
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+      }
+      &--ja {
+        font-size: 28px;
+        @include mq-sp {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .profile {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+    @include mq-sp {
+      justify-content: space-between;
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  }
+  .profile-img {
+    // width: (490/1200)*100%;
+    // max-width: 490px;
+    width: (380/1200)*100%;
+    max-width: 380px;
+    min-width: 280px;
+    margin-right: (80/1200)*100%;
+    @include mq-sp {
+      width: 100%;
+      max-width: 320px;
+      min-width: auto;
+      margin: 0 auto 48px;
+    }
+
+  }
+  .profile-textarea {
+    width: (600/1200)*100%;
+    @include mq-sp {
+      width: 100%;
+    }
+  }
+
+  .profile-head {
+    margin-bottom: 28px;
+    @include mq-sp {
+      margin-bottom: 22px;
+    }
+  }
+
+  .profile-list {
+  }
+  .profile-list__item {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    display: flex;
+    @include mq-sp {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .date {
+      min-width: 7.4em;
+      span {
+        display: inline-block;
+      }
+      .ad {
+        width: 2.4em;
+      }
+      .year {
+        text-align: right;
+        width: 2.5em;
+        letter-spacing: 0.1em;
+      }
+      .month {
+        text-align: right;
+        width: 2.5em;
+        letter-spacing: 0.1em;
+      }
+    }
+    .content {
+      margin-left: 1.6em;
+    }
+  }
+
+  .biography {
+    max-width: 768px;
+    margin: 0 auto;
+    @include mq-sp {
+    }
+  }
+
+  .biography-list {
+    font-size: 18px;
+    min-height: 90px;
+    padding-left: 24px;
+    border-bottom: 1px solid #707070;
+    display: flex;
+    align-items: center;
+    @include mq-sp {
+      font-size: 14px;
+      min-height: 58px;
+      padding: 0.2em 0 0.2em 1em;
+    }
+    .biography-list__ttl {
+      font-weight: bold;
+      min-width: 4.2em;
+      @include mq-sp {}
+    }
+    .biography-list__desc {
+      margin-left: 64px;
+      line-height: 1.4;
+      @include mq-sp {
+        margin-left: 32px;
+      }
+      a {
+        color: $color-primary;
+        position: relative;
+        transition: all 0.1s ease-out;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: $color-primary;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          @include mq-sp {
+            bottom: -1px;
+          }
+        }
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+}
