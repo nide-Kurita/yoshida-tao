@@ -2,13 +2,13 @@
   overflow: hidden;
   position: relative;
   @include mq-sp {
-    background-color: rgba($color-primary, 0.03);
+    background-color: rgba($color-primary, 0.04);
   }
   &::before {
     content: '';
     width: 60%;
     height: calc(100%);
-    background-color: rgba($color-primary, 0.03);
+    background-color: rgba($color-primary, 0.04);
     position: absolute;
     top: 50%;
     right: -40px;
