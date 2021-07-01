@@ -9,9 +9,11 @@ export default class LoadAnime {
     const urlPath = location.pathname;
     const urlHash = location.hash;
     cover.classList.remove('is-break');
+    
 
     if (urlPath ==='/' && urlHash === '') {
       coverLoader.style.display = 'block';
+      coverLogo.style.visibility = 'visible';
       window.addEventListener('load', ()=> {
         coverLoader.style.opacity = '0';
         var stroke = new Vivus('mask',
@@ -35,6 +37,7 @@ export default class LoadAnime {
       setTimeout(()=>{
         cover.style.opacity = '0';
       },500);
+      coverLogo.style.visibility = 'hidden';
     }
   }
 }
