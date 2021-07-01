@@ -21,12 +21,21 @@
   }
   .address {
     font-size: 18px;
-    margin-top: 28px;
-    margin-bottom: 28px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
     @include mq-sp {
       font-size: 14px;
-      margin-top: 14px;
-      margin-bottom: 14px;
+      line-height: 1.4;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    span {
+      display: inline-block;
+      +span {
+        margin-left: 0.5em;
+      }
     }
   }
   .footer-wrap {
@@ -40,16 +49,26 @@
   }
   .tel {
     font-size: 18px;
-    margin: 0 0.5em;
+    margin: 0 1em;
+    display: flex;
     @include mq-sp {
       font-size: 14px;
+      margin: 0 0.55em;
+    }
+    .name {
+      margin-right: 0.5em;
     }
   }
   .fax {
     font-size: 18px;
-    margin: 0 0.5em;
+    margin: 0 1em;
+    display: flex;
     @include mq-sp {
       font-size: 14px;
+      margin: 0 0.55em;
+    }
+    .name {
+      margin-right: 0.5em;
     }
   }
   .copy {

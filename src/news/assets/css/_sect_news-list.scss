@@ -102,11 +102,14 @@
   }
 
   .pagination {
+    width: 100%;
+    overflow: scroll;
+    display: flex;
     .pagination-list {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 60px;
+      margin: 60px auto 0;
     }
     .pagination-list__item {
       .link {
