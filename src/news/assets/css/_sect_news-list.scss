@@ -105,6 +105,11 @@
     width: 100%;
     overflow: scroll;
     display: flex;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display:none;
+    }
     .pagination-list {
       display: flex;
       justify-content: center;
