@@ -9,6 +9,7 @@ export default class LoadAnime {
     const urlPath = location.pathname;
     const urlHash = location.hash;
     cover.classList.remove('is-break');
+    coverLogo.style.visibility = 'hidden';
     
 
     if (urlPath ==='/' && urlHash === '') {
@@ -37,7 +38,6 @@ export default class LoadAnime {
       setTimeout(()=>{
         cover.style.opacity = '0';
       },500);
-      coverLogo.style.visibility = 'hidden';
     }
   }
 }
