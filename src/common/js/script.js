@@ -12,6 +12,11 @@ $(() => {
   new FadeAnime();
   new PageSmoothAnchor();
   // new NewsApi();
+  client
+    .get({
+      endpoint: 'blog',
+    })
+    .then((res) => console.log(res));
 
 
 })
