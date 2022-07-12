@@ -1,5 +1,4 @@
 .news {
-
   .inner--news {
     min-height: calc(100vh - 270px);
     padding-top: 180px;
@@ -38,7 +37,6 @@
     }
   }
 
-
   .news-content {
     margin: 0 auto;
     border-top: 1px solid $color-gray;
@@ -54,7 +52,7 @@
     @include mq-sp {
       font-size: 14px;
     }
-    +.news-text {
+    + .news-text {
       margin-top: 1.2em;
     }
   }
@@ -71,7 +69,7 @@
     position: relative;
     overflow: hidden;
     &::before {
-      content: '';
+      content: "";
       background-color: $color-primary;
       width: 100%;
       height: 100%;
@@ -93,10 +91,6 @@
       &::before {
         transform: none;
       }
-
     }
   }
-
-
-
 }
